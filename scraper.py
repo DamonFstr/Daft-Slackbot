@@ -38,7 +38,7 @@ session = Session()
 
 def scrape_area(area):
     """
-    Scrapes Daft for a certain geographic area, and finds the latest listings based on certain filtering criteria
+    Scrapes Daft for a certain area, and finds the latest listings based on certain filtering criteria
     :param area:
     :return: A list of results.
     """
