@@ -1,10 +1,5 @@
 import os
 import sys
-from os.path import join, dirname
-from dotenv import load_dotenv
-
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
 
 ## Price
 
@@ -22,7 +17,7 @@ AREAS = ["Dublin 1", "Dublin 2", "Dublin 6", "Dublin 7", "Dublin 8"]
 
 ## Search type preferences
 
-# The type of delling you are looking to search for,  i.e houses, properties, auction or apartments.
+# The type of dwelling you are looking to search for,  i.e houses, properties, auction or apartments.
 dwelling_type = 'apartments'
 rent_or_sale = 'rent'
 
@@ -35,6 +30,6 @@ SLEEP_INTERVAL = 20 * 60 # 20 minutes
 SLACK_CHANNEL = "#daftsearch"
 
 # The token that allows us to connect to slack.
-# Should be put in private.py, or set as an environment variable.
+# Should be set as an environment variable.
 SLACK_TOKEN = os.environ.get("SLACK_TOKEN")
 
