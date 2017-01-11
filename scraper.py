@@ -70,7 +70,7 @@ def scrape_area(area):
             # Don't store the listing if it already exists.
             if foo is None:
         
-                # Create the foo (listing) object.
+                # Create the listing object.
                 foo = Daft_Listing(
                     link=listing.get_daft_link(),
                     created=listing.get_posted_since(),
@@ -88,6 +88,7 @@ def scrape_area(area):
 
                 price = listing.get_price()
                 if price is not None:
+                    price = price.encode('utf-8')
                     results.append([listing.get_formalised_address(),price,listing.get_num_bedrooms(),listing.get_daft_link()])
 
             offset += 10
